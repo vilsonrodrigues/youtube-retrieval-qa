@@ -1,8 +1,8 @@
-from chains import retrieval_qa
-from loader import youtube_doc_loader
-from model import load_llm
-from split import split_document
-from vector_store import create_vector_store
+from qa.chains import retrieval_qa
+from qa.loader import youtube_doc_loader
+from qa.model import load_llm
+from qa.split import split_document
+from qa.vector_store import create_vector_store
 
 class QA:
 
