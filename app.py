@@ -17,9 +17,11 @@ def set_openai_key(key: str) -> None:
     os.environ["OPENAI_API_KEY"] = key
 
 def instanciate_retriver(url: str) -> None:
+
     qa.load_model()
     qa.load_vector_store(url)    
     qa.load_retriever()    
+    status.update('READY')
 
 def generate(question: str) -> str:
     return qa.run(question)    
@@ -34,7 +36,9 @@ with gr.Blocks() as app:
     gr.Markdown(DESCRIPTION)
     with gr.Tab("QA"):
         chatbot = gr.Chatbot(label="Bot Answer")
-        question = gr.Textbox(label="Question", placeholder="Write your question here and press enter")    
+        with gr.Row():            
+            question = gr.Textbox(label="Question", placeholder="Write your question here and press enter")    
+            status = gr.Textbox(label="Status", interactive=False)    
         clear = gr.Button("Clear")
         question.submit(respond, [question, chatbot], [question, chatbot])
         clear.click(lambda: None, None, chatbot, queue=False)
@@ -44,7 +48,7 @@ with gr.Blocks() as app:
         url_button = gr.Button("Set URL")
 
     with gr.Tab("OpenAI Key"):
-        key = gr.Textbox(label="key", lines=1, placeholder="Set your OpenAI Key here...")
+        key = gr.Textbox(label="key", type="password", placeholder="Set your OpenAI Key here...")
         key_button = gr.Button("Set Key")
 
     with gr.Accordion("Click me. About this App"):
