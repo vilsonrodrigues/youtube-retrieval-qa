@@ -4,7 +4,7 @@ from qa.model import load_llm
 from qa.split import split_document
 from qa.vector_store import create_vector_store
 
-class QA:
+class YoutubeQA:
 
     def __init__(self):
         pass
