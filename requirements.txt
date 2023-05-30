@@ -3,3 +3,4 @@ openai
 youtube-transcript-api 
 faiss-cpu 
 tiktoken
+gradio==3.20.1
