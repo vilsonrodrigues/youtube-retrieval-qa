@@ -10,7 +10,13 @@ The architecture is divided into two parts, data ingestion and information retri
 
 ![](images/app_hf_spaces.png)
 
-More simple: [run in HuggingFace Spaces.](https://huggingface.co/spaces/vilsonrodrigues/youtube-retrieval-qa)
+#### HuggingFace Spaces
+
+More simple: [run](https://huggingface.co/spaces/vilsonrodrigues/youtube-retrieval-qa)
+
+#### Colab
+
+Run notebook in <i>notebooks/YoutubeRetrievalQA.ipynb</i>
 
 #### To local run
 
@@ -34,8 +40,12 @@ In short, in pipeline ingestion we have:
 
 #### Retrieval QA 
 
+To retrieval, the first option is stateless app
+
 ![](images/retrieval_pipeline.png)
 
 #### Conversational Retrieval QA 
+
+The second option is a chain with memory object
 
 ![](images/conversational_retrieval_pipeline.png)
