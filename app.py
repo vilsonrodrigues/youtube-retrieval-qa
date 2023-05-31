@@ -20,6 +20,10 @@ Follow this steps to use 😉:
 
 qa = YoutubeQA()
 
+def change_chat_mode(radio: str):
+    if radio == "conversational":
+        qa.change_chat_mode(radio)
+
 def set_openai_key(key: str):    
     os.environ["OPENAI_API_KEY"] = key
     # Set status field to Not Ready
@@ -55,6 +59,14 @@ with gr.Blocks() as app:
     with gr.Tab("OpenAI Key"):
         key = gr.Textbox(label="🔑 Key:", type="password", placeholder="Set your OpenAI Key here...")
         key_button = gr.Button("Set Key")
+
+    with gr.Tab("Chat Mode (optional)"):
+        radio = gr.Radio(
+            ["normal", "conversational"], 
+            label="If conversational, history is kept in prompt",
+            value="normal"
+        )
+        radio.change(fn=change_chat_mode, inputs=radio, outputs=None)
 
     #with gr.Accordion("Click me. About this App"):
     #    gr.Markdown("Look at me...")
