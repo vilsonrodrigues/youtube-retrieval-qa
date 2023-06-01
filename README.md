@@ -1,6 +1,8 @@
-# Youtube Retrieval QA System
+# 🤖ChatTube🎥
 
-🤭 Hello, this article describes a work carried out in the postgraduate discipline Sequential Models taught by professor Ivanovitch Silva, and offered by PPGEEC/UFRN. It is part of my group Deborah Moreira and Miguel Euripedes.
+## Youtube Retrieval QA System
+
+🤭 Hello, greetings! In this project we will dive into our exciting work carried out in the Postgraduate discipline of Sequential Models, taught by professor [Ivanovitch Silva](http://github.com/ivanovitchm), and offered by PPGEEC/UFRN. This simple system allows users to engage in conversations about a YouTube video with itself, without the need to watch it firsthand. For this project, our group participants are me, [Deborah Moreira](http://github.com/deborahmoreira) and [Miguel Euripedes](https://github.com/MiguelEuripedes).
 
 By using this app you can ask ChatGPT questions about things in a video. To minimize the cost per token, we use a Vector Store to perform a semantic search and return the most related documents.
 
@@ -10,15 +12,15 @@ The architecture is divided into two parts, data ingestion and information retri
 
 ![](images/app_hf_spaces.png)
 
-#### HuggingFace Spaces
+#### HuggingFace Spaces 🚀
 
-More simple: [run](https://huggingface.co/spaces/vilsonrodrigues/youtube-retrieval-qa)
+More simple: 🎮 [play](https://huggingface.co/spaces/vilsonrodrigues/youtube-retrieval-qa)
 
-#### Colab
+#### Colab 👩🏼‍💻
 
-Run notebook in <i>notebooks/YoutubeRetrievalQA.ipynb</i>
+Run notebook in <i>[notebooks/YoutubeRetrievalQA.ipynb](notebooks/YoutubeRetrievalQA.ipynb)</i>
 
-#### To local run
+#### To local run 🚴🏾‍♀️
 
 Install dependencies:
 
@@ -30,7 +32,7 @@ run Gradio app:
 
 ### Architecture
 
-[This](https.meulink) medium post detail the architecture. 
+📰 [This](https.meulink) medium post detail the architecture. 
 
 #### Ingestion
 
