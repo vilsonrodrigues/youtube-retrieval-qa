@@ -69,7 +69,9 @@ with gr.Blocks() as app:
         radio.change(fn=change_chat_mode, inputs=radio, outputs=None)
 
     with gr.Accordion("Click me. About this App"):        
+        gr.Markdown("")
         gr.Markdown("[![Open in Medium](https://img.shields.io/badge/-Medium-black?style=flat-square&logo=medium)](https://vilsonrodrigues.medium.com/chattube-chat-with-youtube-video-46a0bfc0a2e9)")
+        gr.Markdown("[![Open in Github](https://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/vilsonrodrigues/youtube-retrieval-qa)")
 
     url_button.click(instanciate_retriver, inputs=url, outputs=status)
     key_button.click(set_openai_key, inputs=key, outputs=status)      
