@@ -68,8 +68,8 @@ with gr.Blocks() as app:
         )
         radio.change(fn=change_chat_mode, inputs=radio, outputs=None)
 
-    #with gr.Accordion("Click me. About this App"):
-    #    gr.Markdown("Look at me...")
+    with gr.Accordion("Click me. About this App"):
+        gr.Markdown("Post in medium: https://encurtador.com.br/sB235")
 
     url_button.click(instanciate_retriver, inputs=url, outputs=status)
     key_button.click(set_openai_key, inputs=key, outputs=status)      
